@@ -1,3 +1,14 @@
+# Table of Contents
+
+1.  [Understanding Systems of Sentences (and Equations)](#understanding-systems-of-sentences-and-equations)
+2.  [Linear Equations and Systems: From Sentences to Solving](#linear-equations-and-systems-from-sentences-to-solving)
+3.  [Visualizing Linear Equations and Systems](#visualizing-linear-equations-and-systems)
+4.  [Simplifying Singularity Visualization: Zero Constants](#simplifying-singularity-visualization-zero-constants)
+5.  [Introducing Matrices: Capturing Coefficients](#introducing-matrices-capturing-coefficients)
+6.  [Linear Dependence: Identifying Singular Matrices](#linear-dependence-identifying-singular-matrices)
+7.  [The Determinant: A Quick Test for Singularity](#the-determinant-a-quick-test-for-singularity)
+
+
 # Understanding Systems of Sentences (and Equations)
 
 *   **Core Idea:** A system of sentences, much like a system of linear equations, aims to convey information.
