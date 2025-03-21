@@ -827,3 +827,65 @@ Now do some derivatives by this formula with delta gt, gprime t h prime and h of
 **In other words:**
 
 F prime of (t)  is g prime (t )+ * h(t+ the values of the g times + of th prime of T*
+
+## Derivative Rules: Chain Rule
+
+**Key Idea:** This rule is used to find the derivative of a *composite function* (a function within a function).
+
+**The Rule:**
+
+*   If `f(x) = g(h(x))`, then `f'(x) = g'(h(x)) * h'(x)`
+
+**In words:** The derivative of a composite function is the derivative of the *outer* function (evaluated at the *inner* function) multiplied by the derivative of the *inner* function.
+
+**Memorize Rule:** 3:55
+Chain Rule (d/dx(f(g(x)) =f' (g(x))* g'(x)
+
+**Understanding the Composition:**
+
+1.  Start with an input *t*.
+2.  Apply the function *h*: result is *h(t)*.
+3.  Apply the function *g* to the result from step 2: `g(h(t))`. This is the composite function.
+
+**More Complex Chain**
+This is easy when there are only a few functions. What happens with more that one function?
+*If you want to add 3 derivatives, what is the composition?
+*You need to know the derivates to use them,
+
+*f'(g(h))* g'(h) *h'
+
+**Why is it called the Chain Rule?**
+
+*   You can keep composing more functions, creating a "chain."
+*   The derivative of the chain is a product of terms, one for each link in the chain.
+
+**Chain Rule with Leibniz Notation (Clearer):**
+
+*   If `w = g(v)` and `v = h(t)`, then `dw/dt = (dw/dv) * (dv/dt)`
+
+**Chain Rule with Lagrange Notation (Tricky):**
+
+1.  *h'(t)*
+2. What does g prime means? Well, all we have to d is input the right equation into the g such as h.
+* It mean that g(prime (x)) = g Prime (h(t)) .
+3. Just input the three variable functions by applying chain of rule.
+
+*f prime (g(h))) * g prime (h) *h* is chain of value
+
+**Intuitive Explanation (Car Trip Up a Mountain):**
+
+1.  **Scenario:** You're driving up a mountain.
+    *   `T`: Temperature
+    *   `h`: Height above sea level
+    *   `t`: Time
+
+2.  **Rates of Change:**
+*We said that the derivate with respect to T is dependent to heat change or distance to the change over high
+   *It's the reason we say that the temperature is equal to dT over DH
+
+*The heat with relation to the over time  = dh over dt
+
+3.  **Putting it Together:**
+*As times runs out the mountain gets cold
+*We need all  related the heat from high to derivatives and get D over dt.
+If you are at the D over Dh with derivative times then to derivative that that gets D T 
