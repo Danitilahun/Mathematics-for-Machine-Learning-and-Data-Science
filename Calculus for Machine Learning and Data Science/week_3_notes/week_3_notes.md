@@ -2,7 +2,7 @@
 
 *   **Motivation:** Predicting house prices using features like size (x1) and number of rooms (x2).
 
-*   **Perceptron:** A single-layer neural network that takes inputs and produces an output (ŷ). In this video it's shown how to express linear regression as a perceptron
+*   **Perceptron:** A single-layer neural network that takes inputs and produces an output (ŷ). In This part it's shown how to express linear regression as a perceptron
 
 *   **Structure:**
     *   **Inputs (x1, x2, ...):** Features used for prediction.
@@ -73,7 +73,7 @@
 
 **Topic:** Perceptron for Binary Classification
 
-*   **Extending Perceptrons:** Building upon the regression example, this video demonstrates how to use perceptrons for binary classification problems (e.g., sentiment analysis).
+*   **Extending Perceptrons:** Building upon the regression example, This part demonstrates how to use perceptrons for binary classification problems (e.g., sentiment analysis).
 
 *   **Example: Alien Sentiment Analysis:**
     *   Problem: Classifying alien sentences as happy or sad.

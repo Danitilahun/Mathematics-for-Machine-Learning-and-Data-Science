@@ -173,7 +173,7 @@ Conditional probability is the probability of an event occurring given that anot
 
 ## Applying Conditional Probability: Examples
 
-This video applies the concepts of conditional probability and independence through a few scenarios involving children in a school.
+This part applies the concepts of conditional probability and independence through a few scenarios involving children in a school.
 
 **Scenario 1: Soccer and Room Choice (Dependent Events)**
 
@@ -211,7 +211,7 @@ This video applies the concepts of conditional probability and independence thro
 
 ## Bayes' Theorem: Understanding Test Results
 
-This video explains Bayes' Theorem using the scenario of testing for a rare disease. It demonstrates how to calculate the probability of actually having the disease given a positive test result, considering the test's accuracy and the disease's prevalence.
+This part explains Bayes' Theorem using the scenario of testing for a rare disease. It demonstrates how to calculate the probability of actually having the disease given a positive test result, considering the test's accuracy and the disease's prevalence.
 
 **The Setup:**
 
@@ -261,7 +261,7 @@ Bayes' Theorem helps adjust our initial belief (prior probability) about having 
 
 ## Bayes' Theorem: Formalizing the Calculation
 
-This video presents the formal mathematical derivation of Bayes' Theorem and applies it to the rare disease testing scenario.
+This part presents the formal mathematical derivation of Bayes' Theorem and applies it to the rare disease testing scenario.
 
 **Variables:**
 
@@ -310,7 +310,7 @@ P(A|B) = (0.0001 * 0.99) / (0.0001 * 0.99 + 0.9999 * 0.01) ≈ 0.0098 (Less than
 
 ## Bayes' Theorem: Spam Filtering Example
 
-This video demonstrates how Bayes' Theorem can be used in spam filtering to determine the probability that an email is spam based on the presence of certain words.
+This part demonstrates how Bayes' Theorem can be used in spam filtering to determine the probability that an email is spam based on the presence of certain words.
 
 **The Setup:**
 
@@ -397,7 +397,7 @@ The prior, event, and posterior framework provides a structured way to incorpora
 
 ## Naive Bayes: Combining Multiple Features for Spam Filtering
 
-This video explains how to extend the Bayesian approach to spam filtering by combining multiple features (words) using the Naive Bayes algorithm.
+This part explains how to extend the Bayesian approach to spam filtering by combining multiple features (words) using the Naive Bayes algorithm.
 
 **The Problem:**
 
@@ -444,7 +444,7 @@ The Naive Bayes algorithm is a powerful and efficient method for combining multi
 
 ## The Role of Probability in Machine Learning
 
-This video emphasizes the crucial role of probability in various machine learning tasks, both supervised and unsupervised.
+This part emphasizes the crucial role of probability in various machine learning tasks, both supervised and unsupervised.
 
 **Machine Learning is Often About Estimating Probabilities:**
 

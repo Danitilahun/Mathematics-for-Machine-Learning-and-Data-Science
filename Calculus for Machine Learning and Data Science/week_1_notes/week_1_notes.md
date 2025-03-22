@@ -148,7 +148,7 @@
 **Building on the Velocity Example:**
 
 *   Previous video: Calculating *average* velocity over an interval.
-*   This video: Defining *instantaneous* velocity at a specific point (t=12.5 seconds).
+*   This part: Defining *instantaneous* velocity at a specific point (t=12.5 seconds).
 
 **Estimating Instantaneous Velocity:**
 

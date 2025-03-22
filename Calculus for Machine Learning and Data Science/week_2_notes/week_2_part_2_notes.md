@@ -81,7 +81,7 @@
 
 **Topic:** Gradient Descent (Multiple Variables) - Detailed Explanation
 
-*   **Extending Gradient Descent:** Building upon the 1D concept, this video explains gradient descent for functions of two or more variables.
+*   **Extending Gradient Descent:** Building upon the 1D concept, This part explains gradient descent for functions of two or more variables.
 
 *   **Key Concepts:**
     *   **Gradient:** A vector containing the partial derivatives of the function with respect to each variable. It points in the direction of the *steepest ascent*.
