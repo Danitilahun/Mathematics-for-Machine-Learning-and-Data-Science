@@ -96,6 +96,40 @@
 *   **Maximum Likelihood Estimation (MLE):** A common and widely used method for point estimation. It's the main focus of this lesson.
 *   **Maximum a Posteriori (MAP) Estimation:** A Bayesian generalization of MLE using Bayes' theorem. The MAP estimator can be thought of as a regularization of an MLE estimator, where regularization is a commonly used method in machine learning to prevent overfitting.
 
+## Point Estimates: Short Note
+
+**What is it?**
+
+*   A single numerical value ("best guess") used to estimate an unknown population parameter.
+
+**Examples:**
+
+*   Sample mean (estimating population mean).
+*   Sample proportion (estimating population proportion).
+*   Regression coefficient.
+
+**Key Characteristics:**
+
+*   Simple and easy to understand.
+*   Doesn't convey uncertainty (just a single number).
+*   Can be biased or unbiased.
+*   Variance describes its stability across samples.
+
+**Why Use?**
+
+*   Summarization.
+*   Decision-making.
+*   Building block for other analyses.
+
+**Limitations:**
+
+*   Lacks precision information (no sense of how accurate the guess is).
+*   Can lead to overconfidence.
+
+**Alternatives:**
+
+*   Interval Estimates (Confidence Intervals): provide a range of plausible values.
+
 
 ## Maximum Likelihood Estimation (MLE): In Detail
 
