@@ -1,3 +1,116 @@
+# Table of Contents
+
+1.  [Describing the Center of a Distribution: The Mean (Expected Value)](#describing-the-center-of-a-distribution-the-mean-expected-value)
+    *   Intuitive Meaning: Balancing Point
+    *   Calculating the Mean (Discrete Data)
+    *   Formal Notation
+    *   Expected Payoff in Games
+    *   Expected Value (Discrete Random Variable)
+    *   Expected Value (Continuous Random Variable)
+    *   Common Misconception: Mean vs. Median
+
+2.  [Measures of Central Tendency: Mean, Median, and Mode](#measures-of-central-tendency-mean-median-and-mode)
+    *   The Challenge with the Mean: Outliers
+    *   The Median: A Robust Alternative
+    *   Calculating the Median
+    *   The Mode: The Most Frequent Value
+    *   Real Example: Binomial Distribution
+    *   Example: Normal Distribution
+
+3.  [Expected Value of a Function of a Random Variable](#expected-value-of-a-function-of-a-random-variable)
+    *   The Setup
+    *   Standard Expected Value
+    *   Expected Value of a Function g(X)
+    *   Example: Rolling a Dice
+    *   Linearity of Expectation
+
+4.  [Sum of Expectations: A Powerful Tool](#sum-of-expectations-a-powerful-tool)
+    *   Example: Coin Toss and Dice Roll
+    *   The Matching Names Problem
+    *   Using Sum of Expectations
+    *   Generalizing
+    *   Linearity of Expectation: The Rule
+
+5.  [Measuring the Spread: Variance](#measuring-the-spread-variance)
+    *   The Need for Variance
+    *   Deviations from the Mean
+    *   Average Deviation: Not Useful
+    *   Absolute Deviation
+    *   Squared Deviations: Variance
+    *   Variance Formula
+    *   The Alternative Formula
+
+6.  [Putting Spread in the Right Units: Standard Deviation](#putting-spread-in-the-right-units-standard-deviation)
+    *   The Problem with Variance
+    *   Solution: Standard Deviation
+    *   Benefits of Standard Deviation
+    *   Normal Distribution and Standard Deviation
+
+7.  [Adding Gaussian Distributions](#adding-gaussian-distributions)
+    *   Scenario: Total Response Time
+    *   Modeling Processing Time and Network Latency
+    *   Assumptions
+    *   Simulation
+    *   The Result
+    *   Parameters of the Resulting Gaussian Distribution
+    *   Generalization: Linear Combination of Gaussian Variables
+
+8.  [Standardizing Distributions: Centering and Scaling](#standardizing-distributions-centering-and-scaling)
+    *   Why Standardize?
+    *   Centering a Distribution
+    *   Scaling a Distribution
+    *   Process For Standardization
+
+9.  [Moments of a Distribution](#moments-of-a-distribution)
+    *   Beyond Expectation and Variance
+    *   Moments Defined
+    *   Calculation
+
+10. [Telling Apart Distributions: Skewness (The Third Moment)](#telling-apart-distributions-skewness-the-third-moment)
+    *   Problem: Identical Mean and Variance
+    *   Solution: The Third Moment
+    *   Positive Skew
+    *   Negative Skew
+    *   Zero Skew
+    *   Standardized Skewness
+
+11. [Understanding Tail Behavior: Kurtosis (The Fourth Moment)](#understanding-tail-behavior-kurtosis-the-fourth-moment)
+    *   What it is
+    *   Why it's Important
+    *   High Kurtosis (Leptokurtic)
+    *   Low Kurtosis (Platykurtic)
+
+12. [Visualizing Data: Quantiles](#visualizing-data-quantiles)
+    *   What it is
+    *   Why it's Important
+    *   How it Works
+    *   Common Quantiles
+
+13. [Visualizing Data: Box Plots (Box and Whiskers)](#visualizing-data-box-plots-box-and-whiskers)
+    *   What it is
+    *   Why it's Important
+    *   How to Create a Box Plot
+    *   Box Plot Interpretation
+
+14. [Visualizing Data: Kernel Density Estimation (KDE)](#visualizing-data-kernel-density-estimation-kde)
+    *   What it is
+    *   Why it's Important
+    *   How it Works
+    *   Advantages of KDE over Histograms
+
+15. [Visualizing Data: Violin Plots](#visualizing-data-violin-plots)
+    *   What it is
+    *   Why it's Important
+    *   How it Works
+    *   Advantages of Violin Plots
+
+16. [Checking for Normality: QQ Plots](#checking-for-normality-qq-plots)
+    *   What it is
+    *   Why it's Important
+    *   How it Works
+    *   Interpretation
+
+
 ## Mean (Expected Value): Describing the Center of a Distribution
 
 This part reviews the concept of the mean, also known as the expected value, and demonstrates how it describes the center of a probability distribution.
@@ -491,3 +604,178 @@ Make a mean and scale it with 0. (Therefore it comes scaling)
     *   *k*th moment = Σ (*p<sub>i</sub>* *x<sub>i</sub>*<sup>*k*</sup>) (sum over all *i*)
 
 *   **Upcoming Use:**  Moments will be used to analyze distribution characteristics like skewness and kurtosis later.
+
+
+
+# Skewness: Telling Apart Distributions with Same Mean and Variance
+
+*   **Problem:**  Expected value (mean) and variance can be identical for vastly different probability distributions (e.g., lottery vs. insurance).
+
+*   **Solution:** Use the third moment, E[X^3], to detect skewness.
+
+*   **Skewness:**
+    *   **Positive Skew:** Distribution has values far to the right (e.g., lottery). E[X^3] is large and positive.
+    *   **Negative Skew:** Distribution has values far to the left (e.g., car insurance). E[X^3] is large and negative.
+    *   **Zero Skew:** Distribution is symmetric. E[X^3] is close to zero.
+
+*   **Standardized Skewness:** E[ (X - μ) / σ ]^3 measures skewness more precisely by centering and scaling the data.
+
+**Example:**
+
+*   **Lottery vs. Insurance:**
+
+    *   **Lottery:** Small probability of a large gain (positive skew).
+    *   **Insurance:** Small probability of a large loss (negative skew).
+
+    Even if the expected value and variance are the same for both scenarios, skewness differentiates them. The lottery winnings are skew to the right and losses for insurance are skew to the left.
+
+# Kurtosis: The Fourth Moment
+
+**What it is:** Kurtosis measures the "tailedness" of a probability distribution, specifically how prone it is to producing outliers. It uses the fourth moment to quantify the presence of extreme values.
+
+**Why it's important:** Even if distributions share the same mean, variance, and skewness, kurtosis can differentiate them based on tail thickness.
+
+**How it works:**
+
+*   **High Kurtosis (Leptokurtic):**  "Thick tails," meaning more frequent and extreme outliers.
+*   **Low Kurtosis (Platykurtic):**  "Thin tails," meaning fewer and less extreme outliers.
+
+**Example:**
+
+*   **Game 1:** Win or lose $1 with 50% probability.
+*   **Game 2:** High probability of small wins/losses (±$0.10), with a small probability of large wins/losses (±$10).
+
+    Games 1 and 2 may have the same mean, variance, and skewness. However, Game 2 has a higher kurtosis because it is more likely to produce extreme values due to the ±$10 outcomes. This highlights how kurtosis captures the tail behavior.
+
+# Visualizing Data: Quantiles
+
+**What it is:** Quantiles divide a dataset into segments based on percentile values. This allows for a more detailed understanding of data distribution beyond simple averages.
+
+**Why it's important:** Quantiles provide a way to summarize and visualize how data is spread, highlighting key values like the median and quartiles.
+
+**How it works:**
+
+1.  **Sort the Data:** Arrange the data in ascending order.
+
+2.  **Determine the Quantile:**  The *k*% quantile (q<sub>k/100</sub>) is the value that has *k*% of the data below it and (100-*k*%) above it.
+
+**Common Quantiles:**
+
+*   **Q1 (First Quartile or 25th Percentile):** Separates the bottom 25% from the top 75%.
+*   **Q2 (Second Quartile or 50th Percentile or Median):** Separates the bottom 50% from the top 50%.
+*   **Q3 (Third Quartile or 75th Percentile):** Separates the bottom 75% from the top 25%.
+
+**Example:**
+
+*Newspaper Ad Budget (12 samples, sorted)*: 5, 10, 12, 15, 18, 19, 20, 28, 30, 32, 35, 40
+
+*   **Median (Q2):** (19 + 20) / 2 = 19.5
+*   **Q1:** (12 + 15) / 2 = 13.5
+*   **Q3:** (30 + 32) / 2 = 31
+
+
+# Visualizing Data: Box Plots (Box and Whiskers)
+
+**What it is:** A standardized way to visualize the distribution of data using five key statistics: minimum, maximum, median (Q2), first quartile (Q1), and third quartile (Q3).
+
+**Why it's important:** Box plots quickly show the spread, center, and skewness of data, while also identifying potential outliers.
+
+**How to create a Box Plot:**
+
+1.  **Calculate Quartiles:** Find Q1, Q2 (median), and Q3.
+2.  **Calculate Interquartile Range (IQR):** IQR = Q3 - Q1
+3.  **Draw the Box:** The box extends from Q1 to Q3. Draw a line inside the box at the median (Q2).
+4.  **Draw the Whiskers:**
+    *   Lower Whisker: Extends from Q1 to the smallest value within 1.5 * IQR below Q1. If no data point exists within that range, the whisker extends to the minimum value in the dataset.
+    *   Upper Whisker: Extends from Q3 to the largest value within 1.5 * IQR above Q3. If no data point exists within that range, the whisker extends to the maximum value in the dataset.
+5.  **Identify Outliers:** Data points outside the whiskers are considered outliers.
+
+**Example:**
+
+*Newspaper Ad Budget (Full dataset)*:
+
+*   Minimum: 0.3
+*   Maximum: 114
+*   Q1:  ...
+*   Q2:  ...
+*   Q3:  ...
+*   IQR: ...
+* Outlier limit:  Q3 + 1.5 * IQR = 93.626
+* So if the largest point in data set is greater than 93.626 then that point is outlier.
+
+*Box Plot Interpretation:*
+
+*   **Skewness:** Unequal distances between Q1-Q2 and Q2-Q3 indicate skewness.
+*   **Dispersion:** Length of the box and whiskers represents data spread.
+*   **Outliers:** Points outside the whiskers signal potential anomalies.
+
+# Visualizing Data: Kernel Density Estimation (KDE)
+
+**What it is:** A non-parametric method to estimate the probability density function (PDF) of a continuous random variable from a dataset. It creates a smooth curve that represents the underlying distribution of the data.
+
+**Why it's important:** KDE provides a smoother and potentially more accurate representation of the PDF compared to histograms, especially when dealing with limited data.
+
+**How it works:**
+
+1.  **Choose a Kernel:** Select a kernel function (e.g., Gaussian). This function determines the shape of the "mountain" placed at each data point.
+
+2.  **Kernel Placement:**  Place a kernel function centered at each data point in the dataset.  The "bandwidth" (σ in the case of a Gaussian kernel) controls the spread of each kernel.  Smaller bandwidths result in more peaked densities, while larger bandwidths result in smoother densities.
+
+3.  **Sum and Normalize:** Sum all the kernels and divide by the number of data points (n) to normalize the result. This ensures the area under the resulting curve is equal to one, fulfilling the PDF property.
+
+**Example:**
+
+*Newspaper Ad Budget*: Instead of a histogram, KDE would place a "Gaussian mountain" centered on each newspaper ad budget data point. A higher data density results in a taller estimated PDF, indicating more frequent values in that region.  The bandwidth controls how wide each Gaussian curve is, impacting the smoothness of the final KDE estimate.
+
+**Advantages of KDE over Histograms:**
+
+*   **Smoothness:**  KDE produces a smooth, continuous estimate of the PDF, unlike the step-like appearance of histograms.
+*   **Less Sensitive to Binning:** KDE doesn't require choosing specific bin sizes, which can influence the appearance of histograms.
+
+# Visualizing Data: Violin Plots
+
+**What it is:** A hybrid visualization that combines the benefits of kernel density estimation (KDE) and box plots.
+
+**Why it's important:** Violin plots provide a richer understanding of data distribution compared to either KDE or box plots alone. They show both the shape of the distribution (like KDE) and key statistics like quartiles and outliers (like box plots).
+
+**How it works:**
+
+A violin plot essentially displays a KDE plot mirrored on both sides of a box plot. The components of a violin plot are:
+
+1.  **KDE Plot:** Shows the estimated probability density of the data (similar to a KDE visualization). The width of the violin represents the density of data points at that value.
+
+2.  **Box Plot:** Displays the median, quartiles (Q1 and Q3), and whiskers (as in a standard box plot).
+
+**Example:**
+
+Imagine a violin plot of newspaper ad budgets. The wide parts of the "violin" indicate regions where the data is more densely concentrated. The box plot in the middle reveals the median, quartiles, and potential outliers.
+
+**Advantages of Violin Plots:**
+
+*   **Comprehensive View:** Combines shape, center, spread, and outliers.
+*   **Easy Comparison:**  Allows for easy comparison of distributions across different groups or categories.
+*   **Reveals Modality:** Shows whether the distribution is unimodal (one peak), bimodal (two peaks), or multimodal (multiple peaks), which can be missed by box plots alone.
+
+# Checking for Normality: QQ Plots
+
+**What it is:** Quantile-Quantile plots (QQ plots) are a graphical tool to assess whether a dataset follows a normal (Gaussian) distribution.
+
+**Why it's important:** Many statistical models and tests assume data is normally distributed. QQ plots provide a visual way to check this assumption.
+
+**How it works:**
+
+1.  **Standardize Data:** Subtract the mean and divide by the standard deviation to standardize the dataset.
+2.  **Calculate Quantiles:** Determine the quantiles of the standardized data.
+3.  **Theoretical Quantiles:** Calculate the corresponding quantiles from a standard normal distribution (mean=0, standard deviation=1).
+4.  **Scatter Plot:** Create a scatter plot with theoretical quantiles on the x-axis and the sample quantiles on the y-axis.
+
+**Interpretation:**
+
+*   **Normally Distributed Data:** If the data is normally distributed, the points on the QQ plot will fall close to a straight diagonal line (often shown in orange).
+*   **Deviations from Normality:** Deviations from the straight line indicate departures from normality. Patterns in these deviations can reveal skewness, heavy tails, or other non-normal characteristics.
+
+**Example:**
+
+*Newspaper Budget Data*: The QQ plot might show points deviating significantly from the diagonal line, especially in the tails, suggesting the newspaper budget data is NOT normally distributed. Skewness might also be evident by the concentration of data points on one side than the other of that orange line.
+
+*Sales Data*: A QQ plot of the sales data shows the quantiles closely aligned with the diagonal line, indicating the sales data is likely Gaussian.
